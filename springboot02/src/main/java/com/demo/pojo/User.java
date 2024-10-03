@@ -13,7 +13,10 @@ public class User {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
     // 用户名
-    // 该注解表示 userName 映射数据库中的 user_name 字段
+    /*
+        该注解表示当实体类的属性名和数据库表的列名不一致时，userName 映射数据库中的 user_name 字段，
+        其实 @TableField 注解也可以省略，因为 mybatis-plus 底层封装了驼峰式命名规则。
+    */
     @TableField("user_name")
     private String userName;
     // 密码
@@ -43,5 +46,6 @@ public class User {
         private Integer isDel;
      */
     @TableLogic
+    @TableField("is_del")
     private Integer isDel;
 }

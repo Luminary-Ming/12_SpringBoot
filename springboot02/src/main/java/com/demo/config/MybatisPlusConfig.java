@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Configuration;
 public class MybatisPlusConfig {
     /**
      * 添加插件
+     * @Bean 注解的作用是将方法返回的对象交给 Spring 管理
      */
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor(){
