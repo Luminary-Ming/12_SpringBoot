@@ -7,7 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /*
-    在 SpringBoot 项目中 application.properties 配置比 application.yaml 配置优先级高
+    @SpringBootApplication 注解是用于标记 SpringBoot 应用的启动类。
+    它也是一个复合注解，整合了以下三个注解的功能：
+      1. @Configuration：标识该类是配置类，表明一个类声明了一个或多个 @Bean 方法，并且这些方法被 Spring 容器管理。
+      2. @EnableAutoConfiguration：启用 SpringBoot 的自动配置。
+      3. @ComponentScan：启用组件扫描功能，自动扫描包中的组件，包括 @Component、@Service、@Repository、@Controller 等注解。
+
 */
 @SpringBootApplication
 @Slf4j
